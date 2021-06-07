@@ -4,6 +4,7 @@ from random import shuffle
 api_token = "ed25c0af7734be772dce97e510abaa71"
 api_url = "https://api.themoviedb.org/3"
 
+
 def get_movies_list(list_type):
     endpoint = f"{api_url}/movie/{list_type}?api_key={api_token}"
     response = requests.get(endpoint)
@@ -37,11 +38,12 @@ def get_movie_images(movie_id):
     endpoint = f"{api_url}/movie/{movie_id}/images?api_key={api_token}"
     response = requests.get(endpoint)
     print(response.json())
-    return response.json()["backdrops"]
+    return response.json()['backdrops']
 
 
 def get_random_movie_picture(movie_id):
     pictures = get_movie_images(movie_id)
     shuffle(pictures)
     return pictures[0]["file_path"]
+
 

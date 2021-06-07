@@ -9,7 +9,7 @@
 
    <div class="row">
      <div class="col-md-8">
-       <img class="img-fluid" src="{{tmdb_image_url(picture, size="w780")}}" alt="">
+       <img class="img-fluid" src="{{tmdb_image_url(picture, size='w780')}}" alt="">
      </div>
      <div class="col-md-4">
          <h3>{{ movie.tagline }}</h3>
@@ -31,7 +31,7 @@
         <a href="#">
             <figure class="figure">
                 {% if actor.profile_path %}
-                    <img src="{{ tmdb_image_url(actor.profile_path, "w185") }}" class="figure-img img-fluid rounded" alt="{{ actor.name }}">
+                    <img src="{{ tmdb_image_url(actor.profile_path, 'w185') }}" class="figure-img img-fluid rounded" alt="{{ actor.name }}">
                 {% else %}
                     <img src="https://placehold.it/185x278?text={{ actor.name }}" class="figure-img img-fluid rounded" alt="{{ actor.name }}">
                 {% endif %}
